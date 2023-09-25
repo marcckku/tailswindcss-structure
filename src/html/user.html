@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="tw-bg-white">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="./../../dist/output.css">
+
+</head>
+<body  class="flex items-center justify-center h-screen bg-gray-50">
+  <div class="md:tw-container md:tw-mx-auto tw-container tw-col-start-auto dark:tw-bg-slate-800">
+    <div class="tw-bg-white">
+      <h1 class="tw-text-4xl">Hello Tailwind CSS!</h1>
+
+
+      <h1 class="tw-text-3xl tw-font-bold underline">
+        Hello world!
+      </h1>
+    </div>
+
+    <div class="tw-p-6 tw-max-w-sm tw-mx-auto tw-bg-white tw-rounded-xl tw-shadow-lg tw-flex tw-items-center tw-space-x-4">
+      <div class="tw-shrink-0">
+        <img class="tw-h-12 tw-w-12" src="./../images/logo-tailwindcss.svg" alt="ChitChat Logo">
+      </div>
+      <div>
+        <div class="tw-text-xl tw-font-medium tw-text-black">ChitChat</div>
+        <p class="tw-text-slate-500">You have a new message!</p>
+      </div>
+    </div>
+    <div id="users">
+
+    </div>
+<!--    <div  class="tw-py-8 tw-px-8 tw-max-w-sm tw-mx-auto tw-bg-white tw-rounded-xl tw-shadow-lg tw-space-y-2 sm:tw-py-4 sm:tw-flex sm:tw-items-center sm:tw-space-y-0 sm:tw-space-x-6">-->
+<!--      <img class="tw-block tw-mx-auto tw-h-24 tw-rounded-full sm:tw-mx-0 sm:tw-shrink-0"-->
+<!--        src="./../images/example-profile-photo-2.jpg" alt="Woman's Face" />-->
+<!--      <div class="tw-text-center tw-space-y-2 sm:tw-text-left">-->
+<!--        <div class="tw-space-y-0.5">-->
+<!--          <p class="tw-text-lg tw-text-black tw-font-semibold">-->
+<!--            Erin Lindford-->
+<!--          </p>-->
+<!--          <p class="tw-text-slate-500 tw-font-medium">-->
+<!--            Product Engineer-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <button-->
+<!--          class="tw-px-4 tw-py-1 tw-text-sm tw-text-purple-600 tw-font-semibold tw-rounded-full tw-border tw-border-purple-200 hover:tw-text-white hover:tw-bg-purple-600 hover:tw-border-transparent focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-600 focus:tw-ring-offset-2">Message</button>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <script type="module">
+
+    import Utils from "./../../lib/cjs/src/modules/Utils.js";
+
+    alert("This is an example of TailwindCSS + Typescript")
+    
+    Utils.buildUsers().forEach(user => {
+      console.log("CURRENT USER ")
+      console.log(user.email)
+      console.log(user.password)
+      console.log(user.name)
+      console.log(user.surname)
+      console.log(user.age)
+
+      var userHTML =
+      '<div  class="tw-py-8 tw-px-8 tw-max-w-sm tw-mx-auto tw-bg-white tw-rounded-xl tw-shadow-lg tw-space-y-2 sm:tw-py-4 sm:tw-flex sm:tw-items-center sm:tw-space-y-0 sm:tw-space-x-6">'
+      + '<img class="tw-block tw-mx-auto tw-h-24 tw-rounded-full sm:tw-mx-0 sm:tw-shrink-0"'
+      +  'src="'+  user.photo  +'" alt="Woman\'s Face" />'
+      +  '<div class="tw-text-center tw-space-y-2 sm:tw-text-left">'
+      +  '<div class="tw-space-y-0.5">'
+      +  '<p class="tw-text-lg tw-text-black tw-font-semibold">'  + user.name  +'</p>'
+      +  '<p class="tw-text-slate-500 tw-font-medium">' + user.surname  +'</p>'
+      +  '</div>'
+      +  '<button class="tw-px-4 tw-py-1 tw-text-sm tw-text-purple-600 tw-font-semibold tw-rounded-full tw-border tw-border-purple-200 hover:tw-text-white hover:tw-bg-purple-600 hover:tw-border-transparent focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-purple-600 focus:tw-ring-offset-2">'+ "Message.." + '</button>'
+      +'</div>'
+
+      document.getElementById("users").innerHTML += userHTML;
+    });
+
+  </script>
+
+  <script src="./../../dist/app-bundle.js"></script>
+  <!-- NPM Flowbite CSS HERE -->
+  <script src="./../../node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>

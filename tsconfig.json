@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+
+    "lib": ["DOM",  "ES2023"],
+
+    "module": "node16",
+    "target": "es2022", 
+
+    "outDir": "./lib/cjs/", 
+    "removeComments": true, 
+    "allowJs": true, 
+    "sourceMap": true,                                            
+    "rootDir": "./",                                              
+    "declaration": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16"
+  },
+  "include": ["src/**/*.ts*", "src/modules/Utils.mjs"],     /* Include all folder or files to compile */
+	"exclude": ["node_modules", "dist", "lib"]                /* Exclude all folder or files to compile */
+}
