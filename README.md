@@ -1,6 +1,6 @@
 
 
-################## TUTORIAL Tailwind CSS + TypeScript + WebPack ########################
+################## TUTORIAL Tailwind CSS + TypeScript + Flowbite and WebPack ########################
 
 I got inspired from this tutorial : https://flowbite.com/docs/getting-started/typescript/
 			
